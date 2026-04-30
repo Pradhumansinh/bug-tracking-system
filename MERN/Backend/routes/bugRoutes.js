@@ -7,8 +7,8 @@ import { getBugsByProject } from "../controllers/bugController.js"
 import upload from "../middleware/upload.js"
 import {addComment,editComment,deleteComment} from "../controllers/bugController.js"
 
-const router = express.Router()
 
+const router = express.Router()
 router.post("/",protect,authorizeRoles("Tester","Admin"),upload.single("image"),createBug)
 router.get("/",protect,getBugs)
 router.get("/stats",protect,getDashboardStats)
@@ -22,8 +22,5 @@ router.get("/project/:id",protect,getProjectDashboard)
 router.post("/:id/comment",protect,addComment)
 router.put("/:bugId/comment/:commentId",protect,editComment)
 router.delete("/:bugId/comment/:commentId",protect,deleteComment)
-
-
-
 
 export default router
