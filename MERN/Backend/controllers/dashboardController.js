@@ -57,7 +57,7 @@ for (let p of projectsRaw) {
     totalBugs
   })
 }
-    // ✅ MOVE MY WORK HERE (INSIDE FUNCTION)
+    
     let myWork = []
 
     if (role === "Developer") {
@@ -77,7 +77,7 @@ for (let p of projectsRaw) {
         .sort({ createdAt: -1 })
         .limit(5)
     }
-// 📊 LAST 7 DAYS TREND
+//  LAST 7 DAYS TREND
 const last7Days = [...Array(7)].map((_, i) => {
   const d = new Date()
   d.setDate(d.getDate() - i)
