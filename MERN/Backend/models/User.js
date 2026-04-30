@@ -26,14 +26,14 @@ const userSchema = new mongoose.Schema(
       default: "Tester"
     },
 
-    // 🔐 RESET PASSWORD FIELDS
+    //  RESET PASSWORD FIELDS
     resetPasswordToken: String,
     resetPasswordExpire: Date
   },
   { timestamps: true }
 )
 
-/* 🔒 HASH PASSWORD BEFORE SAVE */
+/*  HASH PASSWORD BEFORE SAVE */
 userSchema.pre("save", async function () {
   if (!this.isModified("password"))
     return 
