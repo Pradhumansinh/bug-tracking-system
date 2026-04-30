@@ -35,7 +35,7 @@ const Notifications = () => {
   return (
     <div style={{ position: "relative" }}>
       
-      {/* 🔔 Bell */}
+      {/* Bell */}
       <div
         onClick={() => setOpen(!open)}
         style={{ cursor: "pointer", position: "relative" }}
@@ -59,7 +59,7 @@ const Notifications = () => {
         )}
       </div>
 
-      {/* 📩 Dropdown */}
+      {/*  Dropdown */}
       {open && (
         <div
           style={{
