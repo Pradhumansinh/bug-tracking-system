@@ -15,7 +15,6 @@ router.put("/:id/add-member",protect,addMember)
 router.put("/:id/remove-member",protect,removeMember)
 router.get("/:id",protect,getProjectById)
 router.put("/:id/status",protect,updateProjectStatus)
-// router.put("/projects/status/:id",adminOnly,updateProjectStatus)
 router.delete("/:id",protect,deleteProject)
 
 export default router
