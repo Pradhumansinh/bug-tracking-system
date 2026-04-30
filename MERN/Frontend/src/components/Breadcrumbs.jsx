@@ -12,7 +12,7 @@ const Breadcrumb = () => {
 
   const paths = location.pathname.split("/").filter(Boolean)
 
-  // 🔥 Fetch project name if in project route
+  //  Fetch project name if in project route
   useEffect(() => {
   if (id) {
     API.get(`/projects/${id}`)
@@ -23,13 +23,6 @@ const Breadcrumb = () => {
       .catch(() => setProjectName("Project"))
   }
 }, [id])
-  // useEffect(() => {
-  //   if (paths.includes("project") && id) {
-  //     API.get(`/projects/${id}`)
-  //       .then((res) => setProjectName(res.data.name))
-  //       .catch(() => setProjectName("Project"))
-  //   }
-  // }, [id])
 
   const format = (text) => {
     return text
@@ -57,7 +50,7 @@ const Breadcrumb = () => {
 
         let label = format(path)
 
-        // 🔥 Replace ID with project name
+        //  Replace ID with project name
         if (path === id && projectName) {
           label = projectName
         }
