@@ -41,7 +41,7 @@ const Settings = () => {
     document.body.classList.toggle("dark", darkMode)
   }, [notifications, darkMode])
 
-  // 🔥 UPDATE PROFILE
+  // UPDATE PROFILE
   const handleUpdate = async () => {
     try {
       setLoading(true)
@@ -67,7 +67,7 @@ const Settings = () => {
     }
   }
 
-  // 🔐 CHANGE PASSWORD
+  //  CHANGE PASSWORD
   const handlePassword = async () => {
     try {
       setLoading(true)
@@ -86,7 +86,7 @@ const Settings = () => {
     }
   }
 
-  // 🚪 LOGOUT ALL
+  //  LOGOUT ALL
   const handleLogoutAll = () => {
     localStorage.clear()
     window.location.href = "/"
