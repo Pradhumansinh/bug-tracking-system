@@ -2,7 +2,7 @@ import Project from "../models/Project.js"
 import Notification from "../models/Notification.js"
 
 //
-// ✅ CREATE PROJECT
+//  CREATE PROJECT
 //
 export const createProject = async (req, res) => {
   try {
@@ -11,7 +11,7 @@ export const createProject = async (req, res) => {
     const project = await Project.create({
       name,
       description,
-      members: [...members, req.user._id], // 👈 creator also member
+      members: [...members, req.user._id], // creator also member
       createdBy: req.user._id
     })
 
@@ -22,7 +22,7 @@ export const createProject = async (req, res) => {
 }
 
 //
-// ✅ GET ALL PROJECTS (ROLE BASED)
+//  GET ALL PROJECTS (ROLE BASED)
 //
 export const getProjects = async (req, res) => {
   try {
@@ -44,7 +44,7 @@ export const getProjects = async (req, res) => {
 }
 
 //
-// ✅ GET SINGLE PROJECT (VERY IMPORTANT)
+//  GET SINGLE PROJECT (VERY IMPORTANT)
 //
 export const getProjectById = async (req, res) => {
   try {
@@ -55,7 +55,7 @@ export const getProjectById = async (req, res) => {
       return res.status(404).json({ message: "Project not found" })
     }
 
-    // 🔐 ACCESS CONTROL
+    //  ACCESS CONTROL
     if (
       req.user.role !== "Admin" &&
       !project.members.some(m => m._id.toString() === req.user._id.toString())
@@ -72,7 +72,7 @@ export const getProjectById = async (req, res) => {
 }
 
 //
-// ✅ ADD MEMBER
+//  ADD MEMBER
 //
 export const addMember = async (req, res) => {
   try {
@@ -110,7 +110,7 @@ export const addMember = async (req, res) => {
 }
 
 //
-// ✅ REMOVE MEMBER (FIXED)
+//  REMOVE MEMBER (FIXED)
 //
 export const removeMember = async (req, res) => {
   try {
@@ -170,7 +170,7 @@ export const updateProjectStatus = async (req, res) => {
   }
 }
 //
-// ✅ DELETE PROJECT (optional but important)
+//  DELETE PROJECT (optional but important)
 //
 export const deleteProject = async (req, res) => {
   try {
@@ -180,7 +180,7 @@ export const deleteProject = async (req, res) => {
       return res.status(404).json({ message: "Project not found" })
     }
 
-    // 🔐 only admin or creator
+    //  only admin or creator
     if (
       req.user.role !== "Admin" &&
       project.createdBy.toString() !== req.user._id.toString()
