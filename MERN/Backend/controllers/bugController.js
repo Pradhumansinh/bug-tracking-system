@@ -220,12 +220,12 @@ export const updateBugStatus = async (req, res) => {
 
     const role = req.user.role
 
-    // ✅ ADMIN (full control)
+    //  ADMIN (full control)
     if (role === "Admin") {
       bug.status = status
     }
 
-    // ✅ DEVELOPER
+    //  DEVELOPER
     else if (role === "Developer") {
       if (["In Progress", "Resolved"].includes(status)) {
         bug.status = status
@@ -236,7 +236,7 @@ export const updateBugStatus = async (req, res) => {
       }
     }
 
-    // ✅ TESTER (verification)
+    // TESTER (verification)
     else if (role === "Tester") {
       // only creator can verify
       if (bug.createdBy.toString() !== req.user._id.toString()) {
@@ -449,7 +449,7 @@ if (bug.assignedTo && bug.assignedTo.toString() !== req.user._id.toString()) {
 }
 }
 
-// ✏️ EDIT COMMENT
+//  EDIT COMMENT
 export const editComment = async (req, res) => {
   try {
     const { text } = req.body
@@ -483,7 +483,7 @@ export const editComment = async (req, res) => {
 }
 
 
-// ❌ DELETE COMMENT
+//  DELETE COMMENT
 export const deleteComment = async (req, res) => {
   try {
     const bug = await Bug.findById(req.params.bugId)
