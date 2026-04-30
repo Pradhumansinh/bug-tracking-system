@@ -8,11 +8,6 @@ dotenv.config()
 import Project from "../models/Project.js"
 import Bug from "../models/Bug.js"
 
-
-
-
-
-
 export const createUser = async (req,res)=>{
     const{name,email,password,role} = req.body
 
@@ -67,19 +62,19 @@ export const deleteUser = async (req, res) => {
       })
     }
 
-    // ✅ REMOVE FROM PROJECTS
+    //  REMOVE FROM PROJECTS
     await Project.updateMany(
       { members: user._id },
       { $pull: { members: user._id } }
     )
 
-    // ✅ UNASSIGN BUGS
+    //  UNASSIGN BUGS
     await Bug.updateMany(
       { assignedTo: user._id },
       { $unset: { assignedTo: "" } }
     )
 
-    // ✅ DELETE USER
+    //  DELETE USER
     await user.deleteOne()
 
     res.json({
@@ -261,7 +256,7 @@ export const getProfile = async (req, res) => {
       members: userId
     }).select("name")
 
-    // ✅ FINAL RESPONSE
+    //  FINAL RESPONSE
     res.json({
       user: {
         _id: req.user._id,
