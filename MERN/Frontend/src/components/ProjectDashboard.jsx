@@ -21,7 +21,7 @@ const ProjectDashboard = () => {
     search: "",
   })
 
-  // ✅ FIXED FETCH
+  //  FIXED FETCH
   const fetchData = async (showLoader = false) => {
     try {
       if (showLoader) setLoading(true)
@@ -47,12 +47,12 @@ const ProjectDashboard = () => {
     }
   }
 
-  // ✅ ONLY FIRST LOAD SHOW LOADER
+  //  ONLY FIRST LOAD SHOW LOADER
   useEffect(() => {
     fetchData(true)
   }, [id])
 
-  // ✅ HANDLERS
+  //  HANDLERS
   const handleDelete = async (bugId) => {
     if (!window.confirm("Delete this bug?")) return
     try {
@@ -100,7 +100,7 @@ const ProjectDashboard = () => {
     }
   }
 
-  // ✅ SAFE UI
+  //  SAFE UI
   if (loading) return <p>Loading...</p>
   if (error) return <p>{error}</p>
   if (!data) return <p>No data</p>
@@ -130,14 +130,14 @@ const handleComment = async (bugId) => {
       text: commentText[bugId]
     })
 
-    // ✅ update selectedBug instantly
+    //  update selectedBug instantly
     setSelectedBug((prev) =>
       prev && prev._id === bugId
         ? { ...prev, comments: res.data.comments }
         : prev
     )
 
-    // ✅ update table data also
+    //  update table data also
     setData((prev) => ({
       ...prev,
       bugs: prev.bugs.map((b) =>
@@ -357,7 +357,7 @@ const handleComment = async (bugId) => {
 
     <div className="modal">
 
-      {/* ❌ CLOSE BUTTON */}
+      {/*  CLOSE BUTTON */}
       <button
         className="close-icon"
         onClick={() => setSelectedBug(null)}
