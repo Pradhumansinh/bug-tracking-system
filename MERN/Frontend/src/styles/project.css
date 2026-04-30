@@ -1,0 +1,81 @@
+.project-status {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.project1-header {
+ background: #0f172a;
+  padding: 16px 20px;
+  border-radius: 14px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  height: 75px;
+}
+
+/* override title inside it */
+.project1-header h2{
+  color: white;
+  margin: 0;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* icon inside title */
+.project1-header svg {
+  font-size: 18px;
+}
+/* ACTIVE */
+.project-status.active {
+  background: #e6f9ec;
+  color: #1e7e34;
+}
+
+/* COMPLETED */
+.project-status.completed {
+  background: #e6f0ff;
+  color: #1d4ed8;
+}
+
+/* ARCHIVED */
+.project-status.archived {
+  background: #f1f1f1;
+  color: #555;
+}
+
+
+
+.project-card{
+     padding: 15px;
+              margin: 10px 0;
+              background: white;
+              border-radius: 8px;
+              cursor: pointer;
+}
+
+.project-card:hover{
+    transform:translateY(-3px);
+    transition:0.2s;
+     background-color: #f1f1f1;}
+
+     .project-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* 🔥 keeps status at top */
+}
+
+.project-left h3 {
+  margin: 0;
+}
+
+.project-left p {
+  margin: 5px 0 0;
+  color: #555;
+}
+
+.project-right {
+  text-align: right;
+}

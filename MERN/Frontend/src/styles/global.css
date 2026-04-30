@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+  
+    font-family: 'Inter',sans-serif;
+}
+
+*{
+    transition:all 0.2s ease-in-out;
+    box-sizing: border-box;
+}
+:root {
+  --primary: #4f46e5;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+}
+
+
+/* DARK MODE */
+body.dark {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+/* Cards */
+body.dark .card,
+body.dark .auth-card,
+body.dark .bug-card,
+body.dark .profile-card,
+body.dark .member-card,
+body.dark .project-card,
+body.dark .modern-table {
+  background: #1e293b;
+  color: #fff;
+}
+
+/* Sidebar */
+body.dark .sidebar {
+  background: #1a1a1a;
+  border-right: 1px solid #333;
+}
+
+/* Navbar */
+body.dark .navbar {
+  background: #1e1e1e;
+  border-bottom: 1px solid #333;
+}
+
+/* Inputs */
+body.dark input,
+body.dark select,
+body.dark textarea {
+  background: #1e293b;
+  color: white;
+  border: 1px solid #475569;
+}
+
+/* Table */
+body.dark th {
+  background: #2a2a2a;
+}
+
+body.dark tr:hover {
+  background: #2a2a2a;
+}
+
+/* Buttons */
+body.dark button {
+  background: #6c63ff;
+}
+
+/* Timeline */
+body.dark .timeline-content {
+  background: #1e1e1e;
+}
+
+/* Text */
+body.dark .meta {
+  color: #aaa;
+}
+
+

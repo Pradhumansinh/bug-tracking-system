@@ -1,0 +1,146 @@
+/* MAIN CONTAINER */
+.dashboard {
+  padding: 20px;
+  background: #f1f5f9;
+  height: 100%;
+}
+
+/* TITLE */
+.dashboard-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+/* TABLE CONTAINER (🔥 SAME AS SETTINGS BOX) */
+.modern-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+/* HEADER */
+.modern-table thead {
+
+  color: black;
+}
+
+.modern-table th {
+  padding: 14px;
+  text-align: left;
+  font-size: 14px;
+}
+
+/* BODY */
+.modern-table td {
+  padding: 14px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+/* ROW HOVER */
+.modern-table tbody tr:hover {
+  background: #f8fafc;
+  transition: 0.2s;
+}
+
+/* ROLE BADGES */
+.role-badge {
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.role-badge.admin {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.role-badge.developer {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.role-badge.tester {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+/* SELECT DROPDOWN */
+.modern-table select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  outline: none;
+  transition: 0.2s;
+}
+
+.modern-table select:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79,70,229,0.2);
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: #dc2626;
+  color: white;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+}
+
+/* ICON BUTTON STYLE (OPTIONAL UPGRADE) */
+.delete-btn::before {
+  content: "🗑️ ";
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .modern-table {
+    font-size: 12px;
+  }
+
+  .dashboard-title {
+    font-size: 18px;
+  }
+}
+
+.usermanagementtext {
+ background: #0f172a;
+  padding: 16px 20px;
+  border-radius: 14px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  height: 75px;
+}
+
+/* override title inside it */
+.usermanagementtext .dashboard-title {
+  color: white;
+  margin: 0;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* icon inside title */
+.usermanagementtext svg {
+  font-size: 18px;
+}
