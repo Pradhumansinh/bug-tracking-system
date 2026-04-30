@@ -33,7 +33,7 @@ const MainDashboard = () => {
   return (
     <div className="dashboard">
 
-      {/* 🔥 HEADER */}
+      {/*  HEADER */}
       <div className="dashboard-header">
         <h2>{user?.role} Dashboard</h2>
         
@@ -42,7 +42,7 @@ const MainDashboard = () => {
 {user.role === "Tester" && <p>🧪 Your Reports</p>}
       </div>
 
-      {/* 📊 SUMMARY CARDS */}
+      {/* SUMMARY CARDS */}
     <div className="card-container">
 
  <div className="card total">
@@ -85,7 +85,7 @@ const MainDashboard = () => {
   <h2>{data.stats.createdToday}</h2>
 </div>
  </div>
-      {/* 📊 TREND CHART */}
+      {/*  TREND CHART */}
       <div className="dashboard-grid">
 <div className="left-panel">
 <div className="section">
@@ -100,7 +100,7 @@ const MainDashboard = () => {
     </LineChart>
   </ResponsiveContainer>
 </div>
-        {/* 📁 PROJECT OVERVIEW */}
+        {/*  PROJECT OVERVIEW */}
 <div className="section">
   <h3><FaProjectDiagram /> Active Projects</h3>
 
@@ -124,7 +124,7 @@ const MainDashboard = () => {
   </div>
 </div>
 </div>
-      {/* ⚡ RECENT ACTIVITY */}
+      {/*  RECENT ACTIVITY */}
       <div className="right-panel">
       <div className="section">
         <h3><FaList /> Recent Activity</h3>
@@ -138,7 +138,7 @@ const MainDashboard = () => {
           </div>
         ))}
       </div>
-      {/* 🔥 MY WORK */}
+      {/*  MY WORK */}
 <div className="section">
   <h3><FaFire/>My Work</h3>
 
