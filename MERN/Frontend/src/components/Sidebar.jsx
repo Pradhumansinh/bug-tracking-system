@@ -1,42 +1,3 @@
-// import {Link} from "react-router-dom"
-// import{useNavigate} from "react-router-dom"
-// import "../styles/layout.css"
-// import{FaBug,FaProjectDiagram,FaUsers,FaTachometerAlt} from "react-icons/fa"
-
-
-// const Sidebar=()=>{
-// const navigate = useNavigate()
-//     const user = JSON.parse(localStorage.getItem("user"))
-//     return(
-//         <div className="sidebar">
-//             <h2 className="logo">Bug Tracker</h2>
-//             <div className="sidebar-profile-card" onClick={()=> navigate("/profile")}>
-//                 <div className="avatar">
-// {user?.name?.charAt(0).toUpperCase({})}
-//                 </div>
-//                 <div className="profile-info">
-//                     <p className="name">{user?.name}</p>
-//                     <span className={`role ${user?.role?.toLowerCase()}`}>{user?.role}</span>
-//                 </div>
-//             </div>
-//             <nav>
-//                 <Link to={
-//                     user?.role === "Admin" ? "/dashboard"
-//                     :user?.role === "Developer" ? "/dashboard"
-//                     :"/dashboard" }> <FaTachometerAlt/>Dashboard</Link>
-//                 <Link to="/bugs"><FaBug />Bugs</Link>
-      
-//                 <Link to ="/projects"><FaProjectDiagram />Projects</Link>
-//                 {user?.role ==="Admin" &&(
-//                 <Link to="/users"><FaUsers />User Managment</Link>)}
-              
-//             </nav>
-//         </div>
-//     )
-// }
-
-// export default Sidebar
-
 import { NavLink, useNavigate } from "react-router-dom"
 import { FaHome, FaBug, FaFolder, FaCog, FaUser, FaUsers, FaUserCog} from "react-icons/fa"
 import "../styles/sidebar.css"
@@ -48,13 +9,10 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
 
-      {/* 🔥 LOGO */}
+      {/*  LOGO */}
       <h2 className="logo">🐞 Bug Tracker</h2>
-
-      {/* 👤 PROFILE (CLICKABLE) */}
-     
-
-      {/* 📌 MENU */}
+          
+      {/*  MENU */}
       <div className="menu">
         <NavLink to="/profile" className="nav-item">
         <FaUser/><span>Profile</span>
@@ -82,7 +40,7 @@ const Sidebar = () => {
          </NavLink>)}
       </div>
 
-      {/* ⚙️ SETTINGS */}
+      {/*  SETTINGS */}
       <div className="bottom">
         <NavLink to="/settings" className="nav-item">
           <FaCog /> <span>Settings</span>
