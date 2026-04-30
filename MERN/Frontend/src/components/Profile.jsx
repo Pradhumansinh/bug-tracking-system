@@ -8,7 +8,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await API.get("/users/profile") // ✅ fixed route
+        const res = await API.get("/users/profile") //  fixed route
         setData(res.data)
       } catch (err) {
         console.log(err)
@@ -17,10 +17,10 @@ const Profile = () => {
     fetchProfile()
   }, [])
 
-  // ✅ prevent crash
+  //  prevent crash
   if (!data) return <p>Loading...</p>
 
-  // ✅ fallback structure (so UI doesn't break)
+  //  fallback structure (so UI doesn't break)
   const user = data.user || data
   const stats = data.stats || { total: 0, open: 0, resolved: 0 }
   const myWork = data.myWork || []
