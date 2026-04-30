@@ -17,7 +17,7 @@ const CreateBug = () => {
     project: projectFromURL || "",
   })
 
-  const [image, setImage] = useState(null) // ✅ FIXED
+  const [image, setImage] = useState(null) //  FIXED
   const [users, setUsers] = useState([])
   const [projects, setProjects] = useState([])
 
