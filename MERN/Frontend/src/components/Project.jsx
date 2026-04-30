@@ -28,7 +28,7 @@ const Projects = () => {
     fetchProjects()
   }, [])
 
-  // 🔹 create project
+  //  create project
   const handleCreate = async () => {
     try {
       await API.post("/projects", form)
@@ -52,14 +52,14 @@ const Projects = () => {
         </div>
      
 
-      {/* ✅ Admin Create Button */}
+      {/* Admin Create Button */}
       {user?.role === "Admin" && (
         <button onClick={() => setShowForm(!showForm)}>
           + Create Project
         </button>
       )}
 
-      {/* ✅ Create Form */}
+      {/*  Create Form */}
       {showForm && (
         <div style={{ margin: "20px 0" }}>
           <input
@@ -84,7 +84,7 @@ const Projects = () => {
         </div>
       )}
 
-      {/* ✅ Project List */}
+      {/*  Project List */}
       {projects.length === 0 ? (
         <p>No projects found</p>
       ) : (
