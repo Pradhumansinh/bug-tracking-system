@@ -64,7 +64,7 @@
      .project-row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* 🔥 keeps status at top */
+  align-items: flex-start;
 }
 
 .project-left h3 {
