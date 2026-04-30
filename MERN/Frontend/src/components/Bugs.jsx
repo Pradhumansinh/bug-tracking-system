@@ -23,8 +23,8 @@ const Bugs=()=>{
       params: filters
     })
 
-    setBugs(res.data.bugs)   // ✅ actual bugs array
-    setData(res.data)        // ✅ pagination info
+    setBugs(res.data.bugs)   // actual bugs array
+    setData(res.data)        // pagination info
 
   } catch (err) {
     console.error(err)
